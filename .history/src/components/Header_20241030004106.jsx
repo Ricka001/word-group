@@ -7,9 +7,8 @@ import {
   SignedOut,
 } from "@clerk/nextjs";
 
-export default async function Header() {
-  //const { userId } = auth();
-
+export default function Header() {
+  const { userId } = auth();
   return (
     <>
       <nav>
@@ -17,8 +16,8 @@ export default async function Header() {
         <Link href={"/about"}>About</Link>
         <Link href={"/posts"}>Chats</Link>
       </nav>
-      {/* when the user is signed in, i will show the user button */}
 
+      {/* when the user is signed in, i will show the user button */}
       <SignedIn>
         <UserButton />
       </SignedIn>

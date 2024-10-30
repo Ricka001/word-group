@@ -8,7 +8,7 @@ import {
 } from "@clerk/nextjs";
 
 export default async function Header() {
-  //const { userId } = auth();
+  const { userId } = auth();
 
   return (
     <>
